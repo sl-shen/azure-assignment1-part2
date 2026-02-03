@@ -13,7 +13,7 @@ spec:
         app: cna-express
     spec:
       containers:
-        - image: ncaregistry.azurecr.io/expressimage
+        - image: regist.azurecr.io/expressimage:v1
           name: expressimage
           ports:
             - containerPort: 80

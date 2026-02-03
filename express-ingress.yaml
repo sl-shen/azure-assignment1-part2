@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cna-express
+spec:
+  ingressClassName: webapprouting.kubernetes.azure.com 
+  rules:
+  - host: cna-express.e116a1bf8d06495da7f6.canadacentral.aksapp.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: cna-express
+            port:
+              number: 8080
